@@ -88,7 +88,8 @@ async function run(): Promise<void> {
     await slack.chat.update({
       ts: threadID,
       channel: channelId,
-      text: messageText
+      text: messageText,
+      parse: "full"
     })
 
     core.setOutput('result', 'Bingo bango bongo!')
