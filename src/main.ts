@@ -89,12 +89,12 @@ async function run(): Promise<void> {
       ts: threadID,
       channel: channelId,
       text: messageText,
-      parse: "full"
+      parse: 'full'
     })
 
     core.setOutput('result', 'Bingo bango bongo!')
   } catch (error) {
-    core.setFailed(error.message)
+    core.setFailed((error as Error).message)
   }
 }
 
