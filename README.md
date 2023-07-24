@@ -1,5 +1,5 @@
 <p>
-  <a href="https://github.com/trymbill/cypress-slack-video-upload-action/actions"><img alt="typescript-action status" src="https://github.com/actions/typescript-action/workflows/build-test/badge.svg"></a>
+  <a href="https://github.com/cgladish/cypress-slack-video-upload-action/actions"><img alt="typescript-action status" src="https://github.com/actions/typescript-action/workflows/build-test/badge.svg"></a>
 </p>
 
 # Upload Cypress videos and screenshots directly to Slack
@@ -60,7 +60,7 @@ jobs:
         uses: cypress-io/github-action@v2
 
       - name: 'Upload screenshots and videos to Slack'
-        uses: trymbill/cypress-slack-video-upload-action@v1.3.0
+        uses: cgladish/cypress-slack-video-upload-action@v1.3.0
         with:
           token: ${{ secrets.SLACK_TOKEN }}
           channels: 'engineering-ops'
@@ -82,7 +82,7 @@ jobs:
         uses: cypress-io/github-action@v2
 
       - name: 'Upload screenshots and videos to Slack'
-        uses: trymbill/cypress-slack-video-upload-action@v1.3.0
+        uses: cgladish/cypress-slack-video-upload-action@v1.3.0
         if: failure()
         with:
           token: ${{ secrets.SLACK_TOKEN }}
